@@ -1,0 +1,19 @@
+<div class="container mt-5">
+    <div class="text-center ">
+        <h1 class="display-4 white-font">¡Bienvenido!</h1>
+        <p class="lead white-font">Encuentra el chat perfecto para ti en nuestra plataforma.</p>
+    </div>
+    <app-stored-name-dialog *ngIf="mostrarDialog" [storedName]="selectedUser"></app-stored-name-dialog>
+    <div *ngIf="!mostrarDialog" class="row mt-5 div-user">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">Selecciona un usuario</h2>
+                    <div class="text-center">
+                        <input (keyup.enter)="selectUser(selectedUser)" class="form-control mb-3" type="text" placeholder="Tu nombre" [(ngModel)]="selectedUser">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>

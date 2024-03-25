@@ -1,0 +1,36 @@
+.container {
+    margin: auto;
+    height: 76vh;
+    background-image: url('src\assets\fondo.jpg'); /* Reemplaza 'ruta/a/tu/imagen.jpg' con la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.card-title {
+    font-size: 24px;
+}
+
+.btn-primary {
+    background-color:  #6abe78;
+    color: #fff;
+    border: 1px solid #000; /* Añade esta línea para el borde negro */
+}
+
+.btn-primary:hover {
+    background-color: #4a8554;
+}
+
+.div-user {
+margin-bottom: 50px;
+}
+
+.white-font{
+    color: white;
+}

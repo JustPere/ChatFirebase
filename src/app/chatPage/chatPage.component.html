@@ -1,0 +1,33 @@
+
+<div >
+  <div class="header">
+    <h2>Prueba técnica</h2>
+    <button class="butonBack" (click)="goBack()">Atrás</button>
+  </div>
+  <div class="message-container">
+    <div *ngIf="isLoading; else messagesList" class="loading-icon">
+      <!-- Icono de carga -->
+      <i class="fas fa-spinner fa-spin"></i>
+    </div>
+    <ng-template #messagesList>
+    <div *ngFor="let message of conversationHistory" [ngClass]="{'sender1': message.sender == sender, 'sender2': message.sender != sender}">
+      <p [ngClass]="{'message-text': true, 'message-text-sender1': message.sender == sender, 'message-text-sender2': message.sender != sender}">
+        {{ message.sender }}
+      </p>
+      <span>{{ message.text }}</span>
+      <span class="timestamp"> {{ message.timestamp | date: 'HH:mm'}}</span>
+    </div>
+    <div id="miDiv"></div>
+
+
+    </ng-template>
+
+
+  <div class="message-input-container">
+    <input (keyup.enter)="sendMessage()" type="text" [(ngModel)]="message" placeholder="Escribe tu mensaje...">
+    <button (click)="sendMessage()" class="send-button">
+      Enviar
+    </button>
+</div>
+</div>
+
